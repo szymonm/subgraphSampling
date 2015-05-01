@@ -4,10 +4,11 @@ import com.twitter.cassovary.graph.DirectedGraph
 
 import scala.collection.mutable
 
-object PermutationBasedShapleyValue {
-  def apply(graph: DirectedGraph, v: (collection.Set[Int] => Double)): collection.Map[Int, Double] = {
+class PermutationBasedShapleyValue(graph: DirectedGraph, v: ValuationFunction)
+  extends PowerIndexComputation {
+  def apply(): collection.Map[Int, Double] = {
     val nodes = graph.iterator.map(_.id).toSet
-    val mv = mutable.Map[Int, Double]() ++ nodes.map(x => (x, 0.0))
+    val mv = mutable.Map[Int, BigDecimal]() ++ nodes.map(x => (x, BigDecimal(0.0)))
     def addToMv(key: Int, value: Double): Unit = {
       mv += ((key, mv(key) + value))
     }
@@ -16,11 +17,11 @@ object PermutationBasedShapleyValue {
         val s = mutable.Set[Int]()
         perm.foreach {
           el =>
-            val without = -v(s)
+            val without = v(s)
             s += el
             addToMv(el, v(s) - without)
         }
     }
-    mv.mapValues(_ / )
+    mv.mapValues(_ / factorial(nodes.size)).mapValues(_.toDouble)
   }
 }

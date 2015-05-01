@@ -12,4 +12,9 @@ object AdditionalTestGraphs {
     NodeIdEdgesMaxId(15, Array(10, 11))
   ),
     StoredGraphDir.Mutual, NeighborsSortingStrategy.LeaveUnsorted)
+
+  def mutualCycle(n: Int) = ArrayBasedDirectedGraph(
+      (0 until n).map(x => NodeIdEdgesMaxId(x, Array[Int]((x + n - 1) % n, (x + 1) % n))).toSeq,
+      StoredGraphDir.Mutual,
+      NeighborsSortingStrategy.LeaveUnsorted)
 }

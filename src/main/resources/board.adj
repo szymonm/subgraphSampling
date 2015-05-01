@@ -1,7 +1,7 @@
 Sevastopol 5
 Moscow
 Rumania
-Black_Sea
+BlackSea
 Ukraine
 Armenia
 Budapest 5
@@ -14,7 +14,7 @@ Rome 5
 Venice
 Naples
 Tuscany
-Tyrrhenian_Sea
+TyrrhenianSea
 Apulia
 Vienna 5
 Bohemia
@@ -23,35 +23,35 @@ Galicia
 Tyrolia
 Budapest
 London 4
-North_Sea
+NorthSea
 Wakes
 Yorkshire
-English_Channel
+EnglishChannel
 Edinburgh 5
 Yorkshire
-North_Sea
-Norwegian_Sea
+NorthSea
+NorwegianSea
 Liverpool
 Clyde
 Portugal 2
 Spain
-Mid-Atlantic_Ocean
+MidAtlanticOcean
 Norway 7
-Barents_Sea
-Norwegian_Sea
+BarentsSea
+NorwegianSea
 Sweden
-North_Sea
-St._Petersbourg
+NorthSea
+StPetersbourg
 Skagerrak
 Finland
 Ankara 4
-Black_Sea
+BlackSea
 Armenia
 Smyrna
 Constantinople
 Prussia 5
 Berlin
-Baltic_Sea
+BalticSea
 Livonia
 Warsaw
 Silesia
@@ -59,40 +59,40 @@ Bulgaria 6
 Serbia
 Rumania
 Greece
-Aegean_Sea
-Black_Sea
+AegeanSea
+BlackSea
 Constantinople
-Western_Mediterranean 6
-Gulf_of_Lyon
-Tyrrhenian_Sea
-North_Africa
-Mid-Atlantic_Ocean
+WesternMediterranean 6
+GulfofLyon
+TyrrhenianSea
+NorthAfrica
+MidAtlanticOcean
 Tunis
 Spain
-Norwegian_Sea 6
-Barents_Sea
+NorwegianSea 6
+BarentsSea
 Edinburgh
 Norway
-North_Sea
+NorthSea
 Clyde
-North-Atlantic_Ocean
+NorthAtlanticOcean
 Spain 6
-Gulf_of_Lyon
+GulfofLyon
 Marseilles
 Gascony
 Portugal
-Mid-Atlantic_Ocean
-Western_Mediterranean
+MidAtlanticOcean
+WesternMediterranean
 Brest 5
 Paris
 Picardy
 Gascony
-Mid-Atlantic_Ocean
-English_Channel
+MidAtlanticOcean
+EnglishChannel
 Armenia 5
 Sevastopol
 Syria
-Black_Sea
+BlackSea
 Smyrna
 Ankara
 Serbia 6
@@ -102,12 +102,12 @@ Albania
 Greece
 Bulgaria
 Budapest
-Gulf_of_Lyon 6
-Tyrrhenian_Sea
+GulfofLyon 6
+TyrrhenianSea
 Marseilles
 Tuscany
 Piedmont
-Western_Mediterranean
+WesternMediterranean
 Spain
 Paris 4
 Burgundy
@@ -115,28 +115,28 @@ Brest
 Picardy
 Gascony
 Wakes 5
-Irish_Sea
-English_Channel
+IrishSea
+EnglishChannel
 London
 Liverpool
 Yorkshire
-North_Africa 3
-Western_Mediterranean
-Mid-Atlantic_Ocean
+NorthAfrica 3
+WesternMediterranean
+MidAtlanticOcean
 Tunis
 Smyrna 6
 Ankara
 Syria
-Aegean_Sea
-Eastern_Mediterranean
+AegeanSea
+EasternMediterranean
 Armenia
 Constantinople
-Irish_Sea 5
-English_Channel
+IrishSea 5
+EnglishChannel
 Wakes
 Liverpool
-North-Atlantic_Ocean
-Mid-Atlantic_Ocean
+NorthAtlanticOcean
+MidAtlanticOcean
 Tyrolia 6
 Trieste
 Vienna
@@ -144,28 +144,28 @@ Piedmont
 Bohemia
 Venice
 Munich
-Mid-Atlantic_Ocean 9
-North_Africa
-English_Channel
+MidAtlanticOcean 9
+NorthAfrica
+EnglishChannel
 Portugal
 Gascony
-Western_Mediterranean
-Irish_Sea
-North-Atlantic_Ocean
+WesternMediterranean
+IrishSea
+NorthAtlanticOcean
 Spain
 Brest
 Holland 5
-Helgoland_Bight
-North_Sea
+HelgolandBight
+NorthSea
 Ruhr
 Kiel
 Belgium
 Sweden 6
-Gulf_of_Bothnia
+GulfofBothnia
 Norway
 Skagerrak
 Denmark
-Baltic_Sea
+BalticSea
 Finland
 Ukraine 5
 Moscow
@@ -178,7 +178,7 @@ Burgundy
 Paris
 Brest
 Belgium
-English_Channel
+EnglishChannel
 Burgundy 7
 Paris
 Marseilles
@@ -188,35 +188,35 @@ Gascony
 Ruhr
 Munich
 Naples 4
-Ionian_Sea
-Tyrrhenian_Sea
+IonianSea
+TyrrhenianSea
 Rome
 Apulia
 Greece 5
-Ionian_Sea
-Aegean_Sea
+IonianSea
+AegeanSea
 Albania
 Serbia
 Bulgaria
 Skagerrak 4
-North_Sea
+NorthSea
 Sweden
 Norway
 Denmark
 Clyde 4
 Edinburgh
-Norwegian_Sea
+NorwegianSea
 Liverpool
-North-Atlantic_Ocean
-North-Atlantic_Ocean 5
-Mid-Atlantic_Ocean
-Irish_Sea
-Norwegian_Sea
+NorthAtlanticOcean
+NorthAtlanticOcean 5
+MidAtlanticOcean
+IrishSea
+NorwegianSea
 Liverpool
 Clyde
 Venice 7
 Trieste
-Adriactic_Sea
+AdriacticSea
 Rome
 Tuscany
 Piedmont
@@ -232,9 +232,9 @@ Tyrolia
 Silesia
 Finland 4
 Sweden
-St._Petersbourg
+StPetersbourg
 Norway
-Gulf_of_Bothnia
+GulfofBothnia
 Warsaw 6
 Moscow
 Ukraine
@@ -260,13 +260,13 @@ Burgundy
 Spain
 Gascony
 Piedmont
-Gulf_of_Lyon
-Aegean_Sea 6
+GulfofLyon
+AegeanSea 6
 Smyrna
-Ionian_Sea
+IonianSea
 Greece
 Bulgaria
-Eastern_Mediterranean
+EasternMediterranean
 Constantinople
 Rumania 7
 Sevastopol
@@ -274,41 +274,41 @@ Serbia
 Ukraine
 Galicia
 Bulgaria
-Black_Sea
+BlackSea
 Budapest
 Moscow 5
 Sevastopol
 Livonia
-St._Petersbourg
+StPetersbourg
 Ukraine
 Warsaw
 Albania 5
 Trieste
-Ionian_Sea
+IonianSea
 Greece
-Adriactic_Sea
+AdriacticSea
 Serbia
 Tuscany 5
 Venice
-Gulf_of_Lyon
-Tyrrhenian_Sea
+GulfofLyon
+TyrrhenianSea
 Rome
 Piedmont
 Gascony 6
 Paris
 Marseilles
 Burgundy
-Mid-Atlantic_Ocean
+MidAtlanticOcean
 Spain
 Brest
 Piedmont 5
 Venice
-Gulf_of_Lyon
+GulfofLyon
 Tuscany
 Tyrolia
 Marseilles
 Syria 3
-Eastern_Mediterranean
+EasternMediterranean
 Armenia
 Smyrna
 Galicia 7
@@ -320,111 +320,111 @@ Warsaw
 Budapest
 Silesia
 Tunis 4
-Western_Mediterranean
-Ionian_Sea
-Tyrrhenian_Sea
-North_Africa
-Adriactic_Sea 5
+WesternMediterranean
+IonianSea
+TyrrhenianSea
+NorthAfrica
+AdriacticSea 5
 Venice
-Ionian_Sea
+IonianSea
 Trieste
 Albania
 Apulia
-Eastern_Mediterranean 4
-Ionian_Sea
+EasternMediterranean 4
+IonianSea
 Smyrna
-Aegean_Sea
+AegeanSea
 Syria
 Apulia 5
 Venice
-Ionian_Sea
+IonianSea
 Naples
-Adriactic_Sea
+AdriacticSea
 Rome
 Kiel 7
 Ruhr
 Holland
-Helgoland_Bight
+HelgolandBight
 Denmark
 Berlin
-Baltic_Sea
+BalticSea
 Munich
 Trieste 7
-Adriactic_Sea
+AdriacticSea
 Serbia
 Vienna
 Albania
 Budapest
 Venice
 Tyrolia
-Black_Sea 6
+BlackSea 6
 Sevastopol
 Rumania
 Ankara
 Bulgaria
 Armenia
 Constantinople
-Barents_Sea 3
-Norwegian_Sea
-St._Petersbourg
+BarentsSea 3
+NorwegianSea
+StPetersbourg
 Norway
 Liverpool 6
 Wakes
 Edinburgh
-Irish_Sea
+IrishSea
 Clyde
-North-Atlantic_Ocean
+NorthAtlanticOcean
 Yorkshire
 Belgium 6
 Ruhr
-English_Channel
+EnglishChannel
 Burgundy
 Holland
 Picardy
-North_Sea
-North_Sea 11
+NorthSea
+NorthSea 11
 Belgium
-English_Channel
-Norwegian_Sea
+EnglishChannel
+NorwegianSea
 Holland
 Edinburgh
 London
 Norway
 Skagerrak
 Denmark
-Helgoland_Bight
+HelgolandBight
 Yorkshire
-Tyrrhenian_Sea 7
-Gulf_of_Lyon
+TyrrhenianSea 7
+GulfofLyon
 Rome
 Tuscany
-Western_Mediterranean
-Ionian_Sea
+WesternMediterranean
+IonianSea
 Naples
 Tunis
-English_Channel 8
+EnglishChannel 8
 Wakes
 Belgium
-Irish_Sea
+IrishSea
 Picardy
 London
-Mid-Atlantic_Ocean
-North_Sea
+MidAtlanticOcean
+NorthSea
 Brest
-Gulf_of_Bothnia 5
+GulfofBothnia 5
 Finland
-Baltic_Sea
+BalticSea
 Livonia
-St._Petersbourg
+StPetersbourg
 Sweden
-Helgoland_Bight 4
-North_Sea
+HelgolandBight 4
+NorthSea
 Holland
 Kiel
 Denmark
 Yorkshire 5
 Edinburgh
-North_Sea
+NorthSea
 Wakes
 London
 Liverpool
@@ -434,39 +434,39 @@ Galicia
 Munich
 Tyrolia
 Silesia
-Ionian_Sea 9
-Tyrrhenian_Sea
-Adriactic_Sea
+IonianSea 9
+TyrrhenianSea
+AdriacticSea
 Tunis
 Albania
 Apulia
 Naples
 Greece
-Aegean_Sea
-Eastern_Mediterranean
-St._Petersbourg 6
-Barents_Sea
+AegeanSea
+EasternMediterranean
+StPetersbourg 6
+BarentsSea
 Moscow
-Gulf_of_Bothnia
+GulfofBothnia
 Norway
 Livonia
 Finland
 Denmark 6
 Sweden
-North_Sea
+NorthSea
 Skagerrak
-Helgoland_Bight
-Baltic_Sea
+HelgolandBight
+BalticSea
 Kiel
 Berlin 5
 Prussia
-Baltic_Sea
+BalticSea
 Munich
 Kiel
 Silesia
-Baltic_Sea 7
+BalticSea 7
 Sweden
-Gulf_of_Bothnia
+GulfofBothnia
 Prussia
 Denmark
 Berlin
@@ -474,14 +474,14 @@ Livonia
 Kiel
 Livonia 6
 Moscow
-Gulf_of_Bothnia
+GulfofBothnia
 Prussia
-St._Petersbourg
-Baltic_Sea
+StPetersbourg
+BalticSea
 Warsaw
 Constantinople 5
-Aegean_Sea
-Black_Sea
+AegeanSea
+BlackSea
 Smyrna
 Bulgaria
 Ankara
