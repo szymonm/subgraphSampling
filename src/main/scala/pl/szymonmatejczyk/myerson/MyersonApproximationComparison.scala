@@ -12,7 +12,7 @@ object MyersonApproximationComparison {
   case class Result(method: String, graph: String, function: String, samples: Int, error: Double)
 
   def mapDiff(m1: collection.Map[Int, Double], m2: collection.Map[Int, Double],
-              errorFunction: (Double => Double) = x => x): Double = {
+              errorFunction: (Double => Double)): Double = {
     require(m1.size == m2.size, "Map sizes do not fit")
     m1.iterator.map{ case (k, v) => errorFunction( math.abs( v - m2(k) ))}.sum
   }
@@ -20,21 +20,21 @@ object MyersonApproximationComparison {
   def compare(graph: DirectedGraph, method: PowerIndexComputation,
               reference: collection.Map[Int, Double]) = {
     val res = method.apply()
-    (mapDiff(res, reference), res)
+    (mapDiff(res, reference, identity[Double]), res)
   }
 
   def compareSamplings(graph: DirectedGraph, method: IterativePowerIndexComputation,
                        samplings: Seq[Int],
                        reference: collection.Map[Int, Double]): Seq[Double] = {
     val res = method.apply(samplings)
-    res.map (m => mapDiff(m, reference))
+    res.map (m => mapDiff(m, reference, identity[Double]))
   }
 
   def main(args: Array[String]): Unit = {
     if (args.length > 0)
       compute(args(0).toInt)
     else
-      compute(15)
+      compute(5)
   }
 
   def socc(g: DirectedGraph, v: ValuationFunction) = new SumOfOverConnectedComponentsValuation(g, v)
