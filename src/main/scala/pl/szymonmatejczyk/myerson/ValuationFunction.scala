@@ -26,7 +26,7 @@ trait MyersonValuation extends ValuationFunction {
 }
 
 class SumOfOverConnectedComponentsValuation(val graph: DirectedGraph, v: ValuationFunction) extends MyersonValuation {
-  def name = "SOCC " + v.name
+  def name = "SOCC_" + v.name
 
   override def apply(s: collection.Set[Int]): Double = {
     cc.components(s, GraphDir.OutDir).map(v.apply).sum
@@ -38,7 +38,7 @@ class SumOfOverConnectedComponentsValuation(val graph: DirectedGraph, v: Valuati
 }
 
 class SizeValuation extends ValuationFunction {
-  def name = "size valuation"
+  def name = "sizeValuation"
   override def apply(s: collection.Set[Int]): Double = s.size
 }
 
