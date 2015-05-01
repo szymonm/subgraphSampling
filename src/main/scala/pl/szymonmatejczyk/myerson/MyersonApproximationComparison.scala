@@ -17,6 +17,14 @@ object MyersonApproximationComparison {
     m1.iterator.map{ case (k, v) => errorFunction( math.abs( v - m2(k) ))}.sum
   }
 
+  def time[R](block: => R): R = {
+    val t0 = System.nanoTime()
+    val result = block    // call-by-name
+    val t1 = System.nanoTime()
+    println("Elapsed time: " + (t1 - t0).toDouble / 1000000000.0 + "s")
+    result
+  }
+
   def compare(graph: DirectedGraph, method: PowerIndexComputation,
               reference: collection.Map[Int, Double]) = {
     val res = method.apply()
@@ -84,9 +92,11 @@ object MyersonApproximationComparison {
 
         val resArray: Array[Array[Double]] = Array.fill(samplings.size, avg)(0.0)
 
-        for (i <- 0 until avg) {
-          compareSamplings(g._1, method, samplings, exact).zipWithIndex.foreach {
-            case (a, index) => resArray(index)(i) = a
+        time {
+          for (i <- 0 until avg) {
+            compareSamplings(g._1, method, samplings, exact).zipWithIndex.foreach {
+              case (a, index) => resArray(index)(i) = a
+            }
           }
         }
 
@@ -96,10 +106,10 @@ object MyersonApproximationComparison {
             results += Result(method.getClass.getSimpleName, g._2, v.name, iterations, error)
         }
       }
+      results.toSeq.writeCSVToFileName(s"out-${g._2}-${v.name}.csv", sep = ",",
+        header = Some(Seq("method", "graph", "function", "samples", "error")))
+      results.clear()
     }
-    print(results)
-
-    results.toSeq.writeCSVToFileName("out.csv", sep = ",", header = Some(Seq("method", "graph", "function", "samples", "error")))
 
     results
   }

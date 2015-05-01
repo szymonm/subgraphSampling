@@ -76,7 +76,7 @@ class HybridCoalitionsMyersonValue(override val graph: DirectedGraph, override v
 
   override def sizeSample(max: Int): Int = {
     val from = exactCoalitionsMaxSize + 1
-    val to = max - exactCoalitionsMaxSize - 1
+    val to = max - exactCoalitionsMaxSize
     if (from == to)
       from
     else
