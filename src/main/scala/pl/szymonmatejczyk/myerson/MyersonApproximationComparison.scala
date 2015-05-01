@@ -61,7 +61,9 @@ object MyersonApproximationComparison {
     def valuationFunctions(g : DirectedGraph) =
       List[MyersonValuation](socc(g, RandomValuationsGenerator.uniform(g.nodeCount)),
         socc(g, RandomValuationsGenerator.superadditiveUniform(agents, 2.0)),
-        socc(g, new SizeValuation))
+        socc(g, RandomValuationsGenerator.submodularUniform(agents, 2.0))
+//        socc(g, new SizeValuation)
+      )
 
     def methods(g: DirectedGraph, v: MyersonValuation, s: Int) = List[IterativePowerIndexComputation](
       //      new ExactMyersonValue(g, v),
