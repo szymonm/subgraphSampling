@@ -14,3 +14,7 @@ libraryDependencies ++= Seq("com.twitter" %% "cassovary-core" % "5.0.0",
                             "org.scala-lang.modules" %% "scala-pickling" % "0.10.0",
                             "com.github.melrief" %% "purecsv" % "0.0.1"
 )
+
+javaOptions in run ++= Seq(
+  "-Xms256M",
+  "-Xmx6G")
