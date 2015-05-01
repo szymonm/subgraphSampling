@@ -64,7 +64,7 @@ object MyersonApproximationComparison {
 
     val results = ArrayBuffer[Result]()
 
-    val avg = 10
+    val avg = 3
 
     for {
       g <- graphs
@@ -92,7 +92,7 @@ object MyersonApproximationComparison {
 
         samplings.zip(resArray.map(mean)).foreach {
           case (iterations, error) =>
-            println(s"${method.getClass.getSimpleName}\t${g._2}\t$iterations\t$error")
+            println(s"${method.getClass.getSimpleName}\t${g._2}\t${v.name}\t$iterations\t$error")
             results += Result(method.getClass.getSimpleName, g._2, v.name, iterations, error)
         }
       }
