@@ -51,16 +51,17 @@ object MyersonApproximationComparison {
     val rand = new Random
     //    val graphs = List(TestGraphs.generateRandomUndirectedGraph(agents, 0.4))
     val graphs = List(
-      (AdditionalTestGraphs.mutualCycle(agents), "cycle"),
       (TestGraphs.generateRandomUndirectedGraph(agents, 0.4), "ER(0.4)"),
-      (new PreferentialAttachment(agents, 4, 3, rand).apply(), s"PA($agents, 4, 3)")
+      (new PreferentialAttachment(agents, 4, 3, rand).apply(), s"PA($agents, 4, 2)"),
+      (AdditionalTestGraphs.mutualCycle(agents), "cycle")
     )
 
     val samplings = List(100, 200, 300, 500, 1000, 1500, 2000, 3000, 4000, 5000, 7000, 10000, 15000)
 
     def valuationFunctions(g : DirectedGraph) =
-      List[MyersonValuation](socc(g, new SizeValuation), socc(g, RandomValuationsGenerator.uniform(g.nodeCount)),
-        socc(g, RandomValuationsGenerator.superadditiveUniform(agents, 2.0)))
+      List[MyersonValuation](socc(g, RandomValuationsGenerator.uniform(g.nodeCount)),
+        socc(g, RandomValuationsGenerator.superadditiveUniform(agents, 2.0)),
+        socc(g, new SizeValuation))
 
     def methods(g: DirectedGraph, v: MyersonValuation, s: Int) = List[IterativePowerIndexComputation](
       //      new ExactMyersonValue(g, v),
