@@ -31,14 +31,16 @@ object MyersonApproximationComparison {
   }
 
   def main(args: Array[String]): Unit = {
-    compute()
+    if (args.length > 0)
+      compute(args(0).toInt)
+    else
+      compute(15)
   }
 
   def socc(g: DirectedGraph, v: ValuationFunction) = new SumOfOverConnectedComponentsValuation(g, v)
 
-  def compute(): Seq[Result] = {
+  def compute(agents: Int): Seq[Result] = {
     val rand = new Random
-    val agents = 30
     //    val graphs = List(TestGraphs.generateRandomUndirectedGraph(agents, 0.4))
     val graphs = List(
       (AdditionalTestGraphs.mutualCycle(agents), "cycle"),
