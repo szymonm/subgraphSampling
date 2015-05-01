@@ -208,3 +208,9 @@ class SumCCBasedSamplingCoalitionsMyersonValue(val graph: DirectedGraph, val v: 
     }
   }
 }
+
+class TimeAlignedSumCCBasedSamplingCoalitionsMyersonValue(override val graph: DirectedGraph, override val v: MyersonValuation,
+                                                          override val samples: Int,
+                                                          override val rand: Random = new Random) extends SumCCBasedSamplingCoalitionsMyersonValue(graph, v, samples, rand) {
+  override def apply(sequentialIterations: scala.Seq[Int]): scala.Seq[Map[Int, Double]] = super.apply(sequentialIterations.map(_ * 30))
+}

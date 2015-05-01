@@ -52,7 +52,7 @@ object MyersonApproximationComparison {
     //    val graphs = List(TestGraphs.generateRandomUndirectedGraph(agents, 0.4))
     val graphs = List(
       (TestGraphs.generateRandomUndirectedGraph(agents, 0.4), "ER(0.4)"),
-      (new PreferentialAttachment(agents, 4, 3, rand).apply(), s"PA($agents, 4, 2)"),
+      (new PreferentialAttachment(agents, 4, 3, rand).apply(), s"PA($agents,4,2)"),
       (AdditionalTestGraphs.mutualCycle(agents), "cycle")
     )
 
@@ -68,7 +68,7 @@ object MyersonApproximationComparison {
       new SamplingCoalitionsMyersonValue(g, v, s)
       ,new HybridCoalitionsMyersonValue(g, v, s, 2)
       //      new MyersonFromCCGenerator(g, RandomCoalitionGenerator(g, new PerfectSampling(g, rand), s), v),
-      ,new SumCCBasedSamplingCoalitionsMyersonValue(g, v, s)
+      ,new TimeAlignedSumCCBasedSamplingCoalitionsMyersonValue(g, v, s)
     )
 
     val results = ArrayBuffer[Result]()
@@ -107,7 +107,7 @@ object MyersonApproximationComparison {
             results += Result(method.getClass.getSimpleName, g._2, v.name, iterations, error)
         }
       }
-      results.toSeq.writeCSVToFileName(s"out-${g._2}-${v.name}.csv", sep = ",",
+      results.toSeq.writeCSVToFileName(s"out-2-${g._2}-${v.name}.csv", sep = ",",
         header = Some(Seq("method", "graph", "function", "samples", "error")))
       results.clear()
     }
