@@ -34,7 +34,7 @@ object MyersonApproximationComparison {
     if (args.length > 0)
       compute(args(0).toInt)
     else
-      compute(5)
+      compute(7)
   }
 
   def socc(g: DirectedGraph, v: ValuationFunction) = new SumOfOverConnectedComponentsValuation(g, v)
@@ -51,8 +51,8 @@ object MyersonApproximationComparison {
     val samplings = List(100, 200, 300, 500, 1000, 1500, 2000, 3000, 4000, 5000, 7000, 10000, 15000)
 
     def valuationFunctions(g : DirectedGraph) =
-      List[MyersonValuation](socc(g, socc(g, new SizeValuation)), socc(g, RandomValuationsGenerator.uniform(g.nodeCount)),
-        socc(g, RandomValuationsGenerator.superadditiveUniform(agents, 3.0)))
+      List[MyersonValuation](socc(g, new SizeValuation), socc(g, RandomValuationsGenerator.uniform(g.nodeCount)),
+        socc(g, RandomValuationsGenerator.superadditiveUniform(agents, 2.0)))
 
     def methods(g: DirectedGraph, v: MyersonValuation, s: Int) = List[IterativePowerIndexComputation](
       //      new ExactMyersonValue(g, v),
