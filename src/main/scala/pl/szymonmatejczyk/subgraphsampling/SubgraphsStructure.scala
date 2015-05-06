@@ -1,9 +1,9 @@
 package pl.szymonmatejczyk.subgraphsampling
 
 import com.twitter.cassovary.graph.GraphDir.GraphDir
-import com.twitter.cassovary.graph.GraphDir.GraphDir
-import com.twitter.cassovary.graph.{GraphDir, DepthFirstTraverser, DirectedGraph}
-import collection.mutable
+import com.twitter.cassovary.graph.{DepthFirstTraverser, DirectedGraph, GraphDir}
+
+import scala.collection.mutable
 
 class SubgraphsStructure(graph: DirectedGraph) {
   type NodeId = Int
@@ -29,6 +29,7 @@ class SubgraphsStructure(graph: DirectedGraph) {
       components += set
       nodesLeft --= set
     }
+//    Predef.assert(components.flatten == nodes)
     components
   }
 }

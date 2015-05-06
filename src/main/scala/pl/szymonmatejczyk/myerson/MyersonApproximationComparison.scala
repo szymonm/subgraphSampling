@@ -42,7 +42,7 @@ object MyersonApproximationComparison {
     if (args.length > 0)
       compute(args(0).toInt)
     else
-      compute(7)
+      compute(5)
   }
 
   def socc(g: DirectedGraph, v: ValuationFunction) = new SumOfOverConnectedComponentsValuation(g, v)
@@ -51,21 +51,21 @@ object MyersonApproximationComparison {
     val rand = new Random
     //    val graphs = List(TestGraphs.generateRandomUndirectedGraph(agents, 0.4))
     val graphs = List(
-      (TestGraphs.generateRandomUndirectedGraph(agents, 0.4), "ER(0.4)"),
-      (TestGraphs.generateRandomUndirectedGraph(agents, 0.1), "ER(0.1)"),
-      (TestGraphs.generateRandomUndirectedGraph(agents, 0.9), "ER(0.9)"),
-      (new PreferentialAttachment(agents, 4, 3, rand).apply(), s"PA($agents,4,2)")
-//      (AdditionalTestGraphs.mutualCycle(agents), "cycle")
+//      (TestGraphs.generateRandomUndirectedGraph(agents, 0.4), "ER(0.4)"),
+//      (TestGraphs.generateRandomUndirectedGraph(agents, 0.1), "ER(0.1)"),
+//      (TestGraphs.generateRandomUndirectedGraph(agents, 0.9), "ER(0.9)"),
+//      (new PreferentialAttachment(agents, 4, 3, rand).apply(), s"PA($agents,4,2)")
+      (AdditionalTestGraphs.mutualCycle(agents), "cycle")
     )
 
     val samplings = List(100, 200, 300, 500, 1000, 1500, 2000, 3000, 4000, 5000, 7000, 10000, 15000)
 
     def valuationFunctions(g : DirectedGraph) =
       List[MyersonValuation](
-        socc(g, RandomValuationsGenerator.uniform(g.nodeCount)),
-        socc(g, RandomValuationsGenerator.superadditiveUniform(agents, 2.0)),
-        socc(g, RandomValuationsGenerator.submodularUniform(agents, 2.0))
-//        socc(g, new SizeValuation)
+//        socc(g, RandomValuationsGenerator.uniform(g.nodeCount)),
+//        socc(g, RandomValuationsGenerator.superadditiveUniform(agents, 2.0)),
+//        socc(g, RandomValuationsGenerator.submodularUniform(agents, 2.0))
+        socc(g, new SizeValuation)
       )
 
     def methods(g: DirectedGraph, v: MyersonValuation, s: Int) = List[IterativePowerIndexComputation](
@@ -73,7 +73,7 @@ object MyersonApproximationComparison {
       new SamplingCoalitionsMyersonValue(g, v, s)
       ,new HybridCoalitionsMyersonValue(g, v, s, 2)
       //      new MyersonFromCCGenerator(g, RandomCoalitionGenerator(g, new PerfectSampling(g, rand), s), v),
-      ,new TimeAlignedSumCCBasedSamplingCoalitionsMyersonValue(g, v, s)
+//      ,new TimeAlignedSumCCBasedSamplingCoalitionsMyersonValue(g, v, s)
     )
 
     val results = ArrayBuffer[Result]()

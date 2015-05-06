@@ -5,9 +5,7 @@ import com.twitter.cassovary.util.Sampling
 import pl.szymonmatejczyk.subgraphsampling.{Subgraph, SubgraphsStructure}
 
 import scala.annotation.tailrec
-import scala.collection
 import scala.collection._
-import scala.collection.mutable.ArrayBuffer
 import scala.util.Random
 
 class SamplingCoalitionsMyersonValue(val graph: DirectedGraph, val v: ValuationFunction, val samples: Int,
@@ -50,7 +48,8 @@ class SamplingCoalitionsMyersonValue(val graph: DirectedGraph, val v: ValuationF
         nodesSet.foreach {
           n =>
             val cprime = if (n == chosen) c else if (c.contains(n)) c - n + chosen else c
-            mv(n) = mv(n) + v(cprime + n) - v(cprime)
+            val mc = v(cprime + n) - v(cprime)
+            mv(n) = mv(n) + mc
         }
     }
   }

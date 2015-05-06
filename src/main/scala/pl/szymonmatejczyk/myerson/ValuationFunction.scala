@@ -29,7 +29,7 @@ class SumOfOverConnectedComponentsValuation(val graph: DirectedGraph, v: Valuati
   def name = "SOCC_" + v.name
 
   override def apply(s: collection.Set[Int]): Double = {
-    cc.components(s, GraphDir.OutDir).map(v.apply).sum
+    cc.components(s, GraphDir.OutDir).iterator.map(v.apply).sum
   }
 
   override def forCC(s: collection.Set[Int]): Double = {
